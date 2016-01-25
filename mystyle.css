@@ -1,0 +1,86 @@
+#searchForm {
+    margin-left: 30px;
+    text-align: left;
+}
+
+#addTaskForm {
+    font-family: cooper;
+    color: blue;
+    padding: 5;
+    margin-left: 20;
+    margin-right: 100;
+    border: dashed;
+}
+
+body {
+    background: cornsilk;
+}
+
+h1 {
+    border: solid 2px blue;
+    padding-left: 30px;
+    margin-right: 50px;
+}
+
+h2 {
+    border: dashed 1px red;
+    color: indigo;
+    margin-left: 30px;
+    margin-right: 120px;
+    padding: 10px;
+}
+
+h3 {
+    text-decoration: underline;
+    margin-left: 30px;
+    margin-right: 80px;
+}
+
+li{
+    border: hidden 1px blue;
+    font-family: rockwell;
+}
+
+/* this is specificity */
+form label {
+    display: block;
+    margin-right: 80px;
+}
+
+/* this class is over-ridden */
+myForm {
+    display: block;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+img {
+    display: inline-block;
+    border: solid 2px gold;
+    margin-left: 30px;
+    margin-right: 80px;
+}
+
+.selector {
+    color: #d6d6d6;
+    background-color: #222;
+    font-size: .8em;
+    font-family: courier;
+    padding: 0 0 8px;
+    text-decoration: none;
+    width: 200px;
+}
+
+h1:hover, h2:hover {
+    background-color: yellow;
+}
+
+.button:focus::after,.button:hover::after {
+    background-color: yellow;
+    content: "  <--";
+}
+
+
+h3:hover, form:hover {
+    background-color: tan;
+}

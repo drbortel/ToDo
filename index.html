@@ -1,0 +1,78 @@
+<html><head>
+    <title>Darren's Task List</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+<script src="src/my.js"></script>
+<header role="header" aria-label="header">
+    <h1 class="tasklist">Get it Done!</h1>
+    <form role="search" id="searchForm">
+        <input type="search" placeholder="Need to find something?">
+        <input type="submit" value="search" title="Won't find it..">
+    </form>
+</header>
+
+<main role="main" aria-label="main">
+    <h2 class="taskList">Darren's Tasklist</h2>
+    <ul id="myList"><li><h3 class="title">
+        Mow the Lawn</h3>
+        <h4 class="description">
+            <div><input class="listItem" type="checkbox" id="mower" />
+                <label for="mower" title="This thing will never start">
+                    Prep the <span style="color:red">Mower</span></label></div>
+            <div class="description">
+                <input class="listItem" type="checkbox" id="debris" />
+                <label class="label" for="debris" title="Are you ever gonna do this ???">
+                    Get debris off the Lawn</label></div>
+        </h4>
+
+        <button class="button" onclick="addItem();">Add Item</button>
+        <button class="button" onclick="removeItem(event);">Remove Item</button>
+
+    </li><li>
+        <h3 class="title">Rake the Leaves</h3>
+        <h4 class="description">
+            <div id="myRake"><input class="listItem" type="checkbox" />
+                <label for="rake" title="In the garage behind the shovel">
+                    Get the <span style="color:red">Rake</span></label></div>
+        </h4>
+    </li><li>
+
+        <h3 id="myHedges" class="title">Trim the Hedges</h3>
+        <h4 class="description">
+            <div><input class="listItem" type="checkbox" id="trimmer" />
+                <label for="trimmer" title="And don't forget the gas">
+                    Oil in the <span style="color:red">Trimmer</span></div>
+            <div class="description">
+                <input class="listItem" type="checkbox" id="bucket" />
+                <label for="bucket" title="These hedges are out of control">
+                    Bucket for Collection</label></div>
+        </h4>
+    </li></ul>
+
+    <h4><div class="myForm">
+        <form name="addTaskForm" id="addTaskForm" onSubmit=>
+
+            <label for="AddTask">Add Task to Do: </label><input id="addTask" type="text" name="addTask" placeholder="What task?"
+                                                                title="What task will you do ?">
+
+            <label for="AddTaskDesc">Task Description: </label><textarea type="text" id="addTaskDesc" name="addTaskDesc" title="Briefly describe your task"></textarea>
+
+            <label for="Priority">Priority: </label>
+            <select id="taskPriority" name="taskPriority" onChange="validateForm()"
+                    title="Select one of these options">
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+            </select>
+
+            <input type="submit" value="Submit" title="Click when ready!" onSubmit="validateForm();">
+
+        </form></div></h4>
+
+    <footer role="footer" aria-label="footer">
+        <h3><div class="selector">This is an example of standardization.</div></h3>
+        <img src="http://anniejb.com/ava/nom_nom.gif"
+             title="Snack Time!" alt="Snack Time" height="200px" width="260px">
+        <h6><i><div class="footer">last updated: </div><div id="myTime"></i></div></h6>
+    </footer>
